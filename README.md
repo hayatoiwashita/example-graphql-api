@@ -13,6 +13,21 @@
 bin/bootDB.sh
 
 # bootRun
-gradlew bootRun
+./gradlew bootRun
+
+```
+
+例えば下記のようなクエリが実行できる
+```
+{
+  getAuthorById(id:1) {
+    id
+    name
+    books {
+      id
+      name
+    }
+  } 
+}
 ```
 
