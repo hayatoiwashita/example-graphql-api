@@ -1,23 +1,24 @@
 # example-graphql-api
 
 ## 概要
-
 - 簡単に作成したSpring Boot + GraphQLのAPIのサンプルコードです。
 
 ## 起動方法
 
-- 下記のように実行した後に「http://localhost:8080/graphiql」にアクセスしてください。
-
+MYSQL、SpringBootの順に起動
 ```
-# dockerでmysqlが起動します。
-bin/bootDB.sh
+# MYSQLを起動
+$ cd /config/DB/
+$ docker-compose up
 
-# bootRun
-./gradlew bootRun
-
+# SpringBootを起動
+$ cd -
+$ ./gradlew bootRun
 ```
 
-例えば下記のようなクエリが実行できる
+上記コマンドを実行後、http://localhost:8080/graphiql にアクセス
+
+クエリサンプル
 ```
 {
   getAuthorById(id:1) {
